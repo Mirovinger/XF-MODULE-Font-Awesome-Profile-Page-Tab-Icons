@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright © 2015 CYBERSPACE Industries. All rights reserved.
+  Contacts: http://cyberspace.industries/
+  License: LICENSE.RUS.txt
+-->
+<addon addon_id="csiXF_faPfPageTabIcons" title="(CSI/XF/MODULE) Font Awesome: Иконки вкладок в профиле пользователя" version_string="1.0.0" version_id="1" url="http://cyberspace.industries/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners/>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups/>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases/>
+  <route_prefixes/>
+  <style_properties/>
+  <templates/>
+  <public_template_modifications>
+    <modification template="member_view" modification_key="csiXF_faPfPageTabIcons_profilePosts" description="Замена текста на иконку во вкладке &quot;Сообщения профиля&quot;" execution_order="99999999" enabled="1" action="str_replace">
+      <find><![CDATA[<li><a href="{$requestPaths.requestUri}#profilePosts">{xen:phrase profile_posts}</a></li>]]></find>
+      <replace><![CDATA[<li title="{xen:phrase profile_posts}" class="Tooltip"><a href="{$requestPaths.requestUri}#profilePosts"><span class="fa fa-comments-o fa-lg fa-fw"></span></a></li>]]></replace>
+    </modification>
+    <modification template="member_view" modification_key="csiXF_faPfPageTabIcons_recentActivity" description="Замена текста на иконку во вкладке &quot;Недавняя активность&quot;" execution_order="99999999" enabled="1" action="str_replace">
+      <find><![CDATA[<li><a href="{$requestPaths.requestUri}#recentActivity">{xen:phrase recent_activity}</a></li>]]></find>
+      <replace><![CDATA[<li title="{xen:phrase recent_activity}" class="Tooltip"><a href="{$requestPaths.requestUri}#recentActivity"><span class="fa fa-clock-o fa-lg fa-fw"></span></a></li>]]></replace>
+    </modification>
+    <modification template="member_view" modification_key="csiXF_faPfPageTabIcons_postings" description="Замена текста на иконку во вкладке &quot;Сообщения&quot;" execution_order="99999999" enabled="1" action="str_replace">
+      <find><![CDATA[<li><a href="{$requestPaths.requestUri}#postings">{xen:phrase postings}</a></li>]]></find>
+      <replace><![CDATA[<li title="{xen:phrase postings}" class="Tooltip"><a href="{$requestPaths.requestUri}#postings"><span class="fa fa-pencil-square-o fa-lg fa-fw"></span></a></li>]]></replace>
+    </modification>
+    <modification template="member_view" modification_key="csiXF_faPfPageTabIcons_information" description="Замена текста на иконку во вкладке &quot;Информация&quot;" execution_order="99999999" enabled="1" action="str_replace">
+      <find><![CDATA[<li><a href="{$requestPaths.requestUri}#info">{xen:phrase information}</a></li>]]></find>
+      <replace><![CDATA[<li title="{xen:phrase information}" class="Tooltip"><a href="{$requestPaths.requestUri}#info"><span class="fa fa-info-circle fa-lg fa-fw"></span></a></li>]]></replace>
+    </modification>
+    <modification template="member_view" modification_key="csiXF_faPfPageTabIcons_resources" description="Замена текста на иконку во вкладке &quot;Ресурсы&quot;" execution_order="99999999" enabled="1" action="str_replace">
+      <find><![CDATA[<li><a href="{$requestPaths.requestUri}#resources">{xen:phrase resources}</a></li>]]></find>
+      <replace><![CDATA[<li title="{xen:phrase resources}" class="Tooltip"><a href="{$requestPaths.requestUri}#resources"><span class="fa fa-cogs fa-lg fa-fw"></span></a></li>]]></replace>
+    </modification>
+  </public_template_modifications>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
