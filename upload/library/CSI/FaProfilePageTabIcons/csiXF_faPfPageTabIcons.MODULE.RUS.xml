@@ -4,7 +4,7 @@
   Contacts: http://cyberspace.industries/
   License: LICENSE.ENG.txt
 -->
-<addon addon_id="csiXF_faPfPageTabIcons" title="(CSI/XF/MODULE) Font Awesome: Иконки вкладок в профиле пользователя" version_string="1.0.0" version_id="1" url="http://cyberspace.industries/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+<addon addon_id="csiXF_faPfPageTabIcons" title="(CSI/XF/MODULE) Font Awesome: Иконки вкладок в профиле пользователя" version_string="1.0.1" version_id="2" url="http://cyberspace.industries/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
   <admin_navigation/>
   <admin_permissions/>
   <admin_style_properties/>
@@ -45,6 +45,15 @@
     <modification template="member_view" modification_key="csiXF_faPfPageTabIcons_resources" description="Замена текста на иконку во вкладке &quot;Ресурсы&quot;" execution_order="99999999" enabled="1" action="str_replace">
       <find><![CDATA[<li><a href="{$requestPaths.requestUri}#resources">{xen:phrase resources}</a></li>]]></find>
       <replace><![CDATA[<li title="{xen:phrase resources}" class="Tooltip"><a href="{$requestPaths.requestUri}#resources"><span class="fa fa-cogs fa-lg fa-fw"></span></a></li>]]></replace>
+    </modification>
+
+    <modification template="xengallery_media_profile_tab" modification_key="csiXF_faPfPageTabIcons_media" description="Замена текста на иконку во вкладке &quot;Медиа&quot;" execution_order="99999999" enabled="1" action="str_replace">
+      <find><![CDATA[<li><a id="xengalleryMediaUserTab" href="{$requestPaths.requestUri}#xengalleryMediaUser">{xen:phrase xengallery_user_media}</a></li>]]></find>
+      <replace><![CDATA[<li title="{xen:phrase xengallery_user_media}" class="Tooltip"><a id="xengalleryMediaUserTab" href="{$requestPaths.requestUri}#xengalleryMediaUser"><span class="fa fa-camera fa-lg fa-fw"></span></a></li>]]></replace>
+    </modification>
+    <modification template="xengallery_media_profile_tab" modification_key="csiXF_faPfPageTabIcons_album" description="Замена текста на иконку во вкладке &quot;Альбомы&quot;" execution_order="99999999" enabled="1" action="str_replace">
+      <find><![CDATA[<li><a id="xengalleryAlbumUserTab" href="{$requestPaths.requestUri}#xengalleryAlbumUser">{xen:phrase xengallery_albums}</a></li>]]></find>
+      <replace><![CDATA[<li title="{xen:phrase xengallery_albums}" class="Tooltip"><a id="xengalleryAlbumUserTab" href="{$requestPaths.requestUri}#xengalleryAlbumUser"><span class="fa fa-picture-o fa-lg fa-fw"></span></a></li>]]></replace>
     </modification>
   </public_template_modifications>
   <bb_code_media_sites/>
