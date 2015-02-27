@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright © 2015 CYBERSPACE Industries. All rights reserved.
+  Copyright © 2015 CYBERSPACE Industries
   Contacts: http://cyberspace.industries/
-  License: LICENSE.ENG.txt
+  License: LICENSE.ENG.txt / LICENSE.RUS.txt
 -->
 <addon addon_id="csiXF_faPfPageTabIcons" title="(CSI/XF/MODULE) Font Awesome: Иконки вкладок в профиле пользователя" version_string="1.0.1" version_id="2" url="http://cyberspace.industries/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
   <admin_navigation/>
